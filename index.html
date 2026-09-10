@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Chess Arena</title>
+<link rel="stylesheet" href="/style.css">
+</head>
+<body>
+<div id="profileModal" class="modal">
+  <div class="modal-card">
+    <h1>♟ Chess Arena</h1>
+    <p>Create your profile to enter the arena.</p>
+    <input id="usernameInput" maxlength="20" placeholder="Unique username">
+    <button id="createProfile">Create profile</button>
+    <div id="profileError" class="error"></div>
+  </div>
+</div>
+
+<header>
+  <div><strong>♟ Chess Arena</strong></div>
+  <div id="me"></div>
+</header>
+
+<main class="layout">
+  <aside class="panel">
+    <h2>Online Players</h2>
+    <div id="players"></div>
+    <hr>
+    <h2>Profile</h2>
+    <div id="profile"></div>
+    <div id="badges"></div>
+  </aside>
+
+  <section class="game-area">
+    <div id="status" class="status">Create your profile to start.</div>
+    <div class="players-bar">
+      <div id="blackPlayer">Black</div>
+      <div id="blackClock">05:00</div>
+    </div>
+    <div id="board" class="board" aria-label="Chess board"></div>
+    <div class="players-bar">
+      <div id="whitePlayer">White</div>
+      <div id="whiteClock">05:00</div>
+    </div>
+    <div class="controls">
+      <button id="resign" disabled>Resign</button>
+    </div>
+  </section>
+</main>
+
+<div id="challengeModal" class="modal hidden">
+  <div class="modal-card">
+    <h2>Challenge</h2>
+    <p id="challengeText"></p>
+    <button id="acceptChallenge">Accept</button>
+    <button id="declineChallenge">Decline</button>
+  </div>
+</div>
+
+<script src="/socket.io/socket.io.js"></script>
+<script src="/app.js"></script>
+</body>
+</html>
