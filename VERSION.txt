@@ -1,0 +1,1 @@
+Goofy Chess 2.0 - Royale True Fix + Board Deduplication
